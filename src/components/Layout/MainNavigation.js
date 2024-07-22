@@ -9,8 +9,7 @@ const MainNavigation = () => {
   const history=useHistory();
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
-  const handleLogout=(event)=>{
-    event.preventDefault();
+  const handleLogout=()=>{
     authCtx.logout();
     history.replace("/auth");
   }
